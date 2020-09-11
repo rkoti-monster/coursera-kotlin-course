@@ -12,5 +12,5 @@ fun evaluateGuess(secret: String, guess: String): Evaluation {
 
 fun getCharFrequency(first: String, second: String): Map<Char, Int> {
     val diffs = first.withIndex().filter { x -> second.withIndex().none { it == x } }
-    return diffs.groupBy { x -> x.value }.mapValues { it.value.size }
+    return diffs.groupBy { it.value }.mapValues { it.value.size }
 }
